@@ -30,6 +30,7 @@ body {
   width: 550px;
 }
 
+
 .space {
   margin-bottom: 16px;
 }
@@ -38,32 +39,36 @@ body {
   margin-bottom: 32px;
 }
 
-.label {
+section .label {
   font-size: 18px;
   font-weight: 600;
+  font-family: "Inter";
+  line-height: 22px;
+  font-style: normal;
 }
 
-.header {
+header {
   background: url(images/header.png) center right no-repeat;
   background-size: cover;
-  height: 193px;
+  height:193px;
   padding: 23px 36px;
   width: 100%;
 }
 
-.header .title {
+header .title {
   color: #fff;
   font-size: 23px;
   font-weight: 300;
 }
 
-.header .title span {
+header .title span {
   font-weight: bold;
   font-size: 24px;
   line-height: 1.46;
 }
 
-.form textarea {
+
+section .form textarea {
   background: #dde3e9;
   border: 1px solid #2f3676;
   border-radius: 8px;
@@ -75,15 +80,18 @@ body {
   font-size: 14px;
 }
 
-.fieldset {
+section .fieldset {
   padding: 0 32px;
+  background-color:#f2f2f2;
+  
 }
 
-.counter svg {
+
+section .counter svg {
   fill: #2f3676;
 }
 
-.counter input {
+section .counter input {
   background: #dde3e9;
   border: 1px solid #2f3676;
   border-radius: 7px;
@@ -93,14 +101,14 @@ body {
   width: 60px;
 }
 
-.footer {
+footer {
   padding: 32px;
   background: #dde3e9;
   display: flex;
   justify-content: flex-end;
 }
 
-.footer button {
+footer button {
   appearance: none;
   background: #2f3676;
   border: 0;
@@ -114,8 +122,8 @@ body {
   transition: all .3s ease-in-out;
 }
 
-.footer button:focus,
-.footer button:hover {
+footer button:focus,
+footer button:hover {
   transform: scale(1.05);
   background: #191847;
 }
