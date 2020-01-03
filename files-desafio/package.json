@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Teste da VAGAS.com para frontend :)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "babel ./main.js -o bundle.js -w",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/preset-env": "^7.7.7"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
