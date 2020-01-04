@@ -8,62 +8,82 @@
     </head>
 
     <body>
-
         <div class="box">
-        
-            <header>
-                <div>
-                    <div class="title">Formulário<br />para compra de<br /><span>Pacote de Stickers</span></div>
-                </div>
+            
+            <header>    
+                    <h1>Formulário<br/> para compra de <br/> <strong>Pacote de Stickers</strong></h1>
+                    <div class='opa'></div>
             </header>
 
-            <div class="space-md"></div>
-
             <section>
+                <div class="space-md"></div>
                 <div class="fieldset">
                     <div class="label"> Quais sticker </div>
                     <div class="space"></div>
                         
-                    <div><input type="checkbox" /> React</div>
-                    <div><input type="checkbox" /> Vue</div>
-                    <div><input type="checkbox" /> Angular</div>
+                    <!-- Referência estilizar o checkbox https://www.w3schools.com/howto/howto_css_custom_checkbox.asp-->    
+                        <label class="container">React
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">Vue
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Angular
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
                 </div>
                     
                 <div class="space-md"></div>
-                        
-                    <div class="fieldset">
-                        <div class="label">Quantos stickers de cada?</div>
-                        <div class="space"></div>
-                        <div class="counter">
+                
+                <div class="fieldset">
+                    <div class="label">Quantos stickers de cada?</div>
+
+                    <div class="space"></div>
+
+                    <div class="counter">
+
+                        <div class='leftSvg'> 
                             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
-                            <path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" /></svg>
-                            <input type="text" placeholder="0" />
-                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
-                            <path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg>
+                                <path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
+                            </svg>
                         </div>
-                    </div>  
+
+                        <input type="text" placeholder="0" />
+
+                        <div class='rightSvg'> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+                                <path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>  
                 
                 <div class="space-md"></div>
                 
-                    <div class="form"> 
-                        <div class="fieldset">
-                            <div class="label">Observações:</div>
-                            <div class="space"></div>
-                            <textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
-                        </div>
+                <div class="form"> 
+                    <div class="fieldset">
+                        <div class="label">Observações:</div>
+                        <div class="space"></div>
+                        <textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
                     </div>
+                </div>
             </section>    
 
-                <div class="space-md"></div>
+            <div class="space-md"></div>
                 
-            <footer> 
-                    <div>
-                        <button>Enviar</button>
-                    </div>
+            <footer>
+                <div>
+                    <button>Enviar</button>
+                </div>
             </footer>
 
        
         <script src="bundle.js"></script>
-        
     </body>
 </html>

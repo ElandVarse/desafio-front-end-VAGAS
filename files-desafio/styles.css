@@ -16,21 +16,6 @@ html {
   padding: 0;
 }
 
-body {
-  background: rebeccapurple;
-  color: #071723;
-}
-
-.box {
-  background-color: #f2f2f2;
-  border-radius: 8px;
-  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
-  margin: 20px auto;
-  overflow: hidden;
-  width: 550px;
-}
-
-
 .space {
   margin-bottom: 16px;
 }
@@ -39,34 +24,48 @@ body {
   margin-bottom: 32px;
 }
 
-section .label {
-  font-size: 18px;
-  font-weight: 600;
-  font-family: "Inter";
-  line-height: 22px;
-  font-style: normal;
+body {
+  background: rebeccapurple;
+  color: #071723;
 }
 
-header {
+.box {
+  background-color: #f2f2f2;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  width: 550px;
+}
+
+header{
   background: url(images/header.png) center right no-repeat;
-  background-size: cover;
-  height:193px;
-  padding: 23px 36px;
+  background-size: 100% 100%;
+  height: 187px;
   width: 100%;
+  padding: 23px 36px;
+  position: relative;
 }
 
-header .title {
+
+header h1 {
   color: #fff;
   font-size: 23px;
   font-weight: 300;
 }
 
-header .title span {
+header h2 {
   font-weight: bold;
   font-size: 24px;
   line-height: 1.46;
+  color: #fff;
 }
 
+
+section .label {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Inter";
+}
 
 section .form textarea {
   background: #dde3e9;
@@ -82,13 +81,76 @@ section .form textarea {
 
 section .fieldset {
   padding: 0 32px;
-  background-color:#f2f2f2;
-  
+  background-color:#f2f2f2; 
 }
 
+section .container {
+  display: block;
+  position: relative;
+  padding-top: 3px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Inter";
+
+}
+
+section .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+section .container:hover input ~ .checkmark {
+  background-color: #191847;;
+}
+
+section .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #2F3676;
+  border-radius: 5px;
+}
+
+section .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+section .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+section .container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 section .counter svg {
   fill: #2f3676;
+}
+
+section .counter svg:hover {
+  fill: #191847;;
+}
+
+section .rightSvg{
+  margin-top: -46px;
+  margin-left: 120px;
 }
 
 section .counter input {
@@ -97,8 +159,12 @@ section .counter input {
   border-radius: 7px;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 8px;
   width: 60px;
+  height: 42px;
+  position: absolute;
+  margin-top: -46px;
+  margin-left: 50px;
+  text-align: center;
 }
 
 footer {
@@ -125,5 +191,5 @@ footer button {
 footer button:focus,
 footer button:hover {
   transform: scale(1.05);
-  background: #191847;
+  background:  #191847;;
 }
