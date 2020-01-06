@@ -1,0 +1,184 @@
+@import url("https://rsms.me/inter/inter.css");
+ html {
+     font-family: "Inter", sans-serif;
+}
+ @supports (font-variation-settings: normal) {
+     html {
+         font-family: "Inter var", sans-serif;
+    }
+}
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+ body {
+     background: rebeccapurple;
+     color: #071723;
+}
+ .box {
+     background-color: #f2f2f2;
+     box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+     margin: 20px auto;
+     overflow: hidden;
+     width: 550px;
+}
+ header{
+    background: url(images/header.png)  right no-repeat;
+    background-size: cover;
+    height: 187px;
+    width: 101%;
+    padding: 23px 36px;
+    position: relative;
+     
+}
+ header h1 {
+     color: #fff;
+     font-size: 23px;
+     font-weight: 300;
+}
+ header h2 {
+     font-weight: bold;
+     font-size: 24px;
+     line-height: 1.46;
+     color: #fff;
+}
+ .space {
+     margin-bottom: 16px;
+}
+ .space-md {
+     margin-bottom: 32px;
+}
+ .label {
+     font-size: 18px;
+     font-weight: 600;
+     font-family: "Inter";
+}
+ .fieldset {
+     padding: 0 32px;
+     background-color:#f2f2f2;
+}
+/*==============Style Checkbox================*/
+ .interfaceSup .container {
+     display: block;
+     position: relative;
+     padding-top: 3px;
+     padding-left: 35px;
+     margin-bottom: 12px;
+     cursor: pointer;
+     font-size: 14px;
+     font-family: "Inter";
+     width: 0px;
+     outline: none;
+}
+
+ .interfaceSup .container input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+}
+ .interfaceSup .container:hover input ~ .checkmark {
+     background-color: #191847;
+    ;
+}
+ .interfaceSup .checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 25px;
+     width: 25px;
+     background-color: #2F3676;
+     border-radius: 5px;
+}
+ .interfaceSup .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+}
+ .interfaceSup .container input:checked ~ .checkmark:after {
+     display: block;
+}
+ .interfaceSup .container .checkmark:after {
+     left: 9px;
+     top: 5px;
+     width: 5px;
+     height: 10px;
+     border: solid white;
+     border-width: 0 3px 3px 0;
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+}
+/*==============Input quantidade================*/
+.interfaceSup .rightSvg{
+    margin-top: -46px;
+    margin-left: 120px;
+}
+.interfaceSup .counter input {
+    background: #dde3e9;
+    border: 1px solid #2f3676;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 60px;
+    height: 42px;
+    position: absolute;
+    margin-top: -46px;
+    margin-left: 50px;
+    text-align: center;
+}
+.interfaceSup .counter svg {
+  fill: #2f3676;
+}
+.interfaceSup .counter svg:hover {
+  fill: #191847;
+ ;
+}
+.botao{
+  border: none;
+  padding: 0px;
+  background: none;
+  outline: none; 
+}
+/*==============Input de observações================*/
+ .obsInput .form textarea {
+     background: #dde3e9;
+     border: 1px solid #2f3676;
+     border-radius: 8px;
+     color: #071723;
+     height: 140px;
+     padding: 16px;
+     resize: none;
+     width: 100%;
+     font-size: 14px;
+     outline: none;
+}
+/*==============Rodapé de box================*/
+ footer {
+     padding: 32px;
+     background: #dde3e9;
+     display: flex;
+     justify-content: flex-end;
+}
+ footer button {
+     appearance: none;
+     background: #2f3676;
+     border: 0;
+     border-radius: 8px;
+     color: #fff;
+     padding: 10px;
+     font-size: 18px;
+     text-transform: uppercase;
+     font-weight: bold;
+     padding: 8px 32px;
+     transition: all .3s ease-in-out;
+     outline: none;
+}
+ footer button:hover {
+     transform: scale(1.05);
+     background: #191847;
+    ;
+}
+ 
