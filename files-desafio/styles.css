@@ -24,12 +24,13 @@
      width: 550px;
 }
  header{
-     background: url(images/header.png) center right no-repeat;
-     background-size: cover;
-     height: 187px;
-     width: 100%;
-     padding: 23px 36px;
-     position: relative;
+    background: url(images/header.png)  right no-repeat;
+    background-size: cover;
+    height: 187px;
+    width: 101%;
+    padding: 23px 36px;
+    position: relative;
+     
 }
  header h1 {
      color: #fff;
@@ -67,7 +68,10 @@
      cursor: pointer;
      font-size: 14px;
      font-family: "Inter";
+     width: 0px;
+     outline: none;
 }
+
  .interfaceSup .container input {
      position: absolute;
      opacity: 0;
@@ -149,6 +153,7 @@
      resize: none;
      width: 100%;
      font-size: 14px;
+     outline: none;
 }
 /*==============Rodapé de box================*/
  footer {
@@ -169,8 +174,9 @@
      font-weight: bold;
      padding: 8px 32px;
      transition: all .3s ease-in-out;
+     outline: none;
 }
- footer button:focus, footer button:hover {
+ footer button:hover {
      transform: scale(1.05);
      background: #191847;
     ;
