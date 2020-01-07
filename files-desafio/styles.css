@@ -24,13 +24,12 @@
      width: 550px;
 }
  header{
-    background: url(images/header.png)  right no-repeat;
-    background-size: cover;
-    height: 187px;
-    width: 101%;
-    padding: 23px 36px;
-    position: relative;
-     
+     background: url(images/header.png) right no-repeat;
+     background-size: cover;
+     height: 187px;
+     width: 101%;
+     padding: 23px 36px;
+     position: relative;
 }
  header h1 {
      color: #fff;
@@ -71,7 +70,6 @@
      width: 0px;
      outline: none;
 }
-
  .interfaceSup .container input {
      position: absolute;
      opacity: 0;
@@ -81,7 +79,7 @@
 }
  .interfaceSup .container:hover input ~ .checkmark {
      background-color: #191847;
-    ;
+     ;
 }
  .interfaceSup .checkmark {
      position: absolute;
@@ -112,35 +110,35 @@
      transform: rotate(45deg);
 }
 /*==============Input quantidade================*/
-.interfaceSup .rightSvg{
-    margin-top: -46px;
-    margin-left: 120px;
+ .interfaceSup .rightSvg{
+     margin-top: -46px;
+     margin-left: 120px;
 }
-.interfaceSup .counter input {
-    background: #dde3e9;
-    border: 1px solid #2f3676;
-    border-radius: 7px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 60px;
-    height: 42px;
-    position: absolute;
-    margin-top: -46px;
-    margin-left: 50px;
-    text-align: center;
+ .interfaceSup .counter input {
+     background: #dde3e9;
+     border: 1px solid #2f3676;
+     border-radius: 7px;
+     font-size: 20px;
+     font-weight: bold;
+     width: 60px;
+     height: 42px;
+     position: absolute;
+     margin-top: -46px;
+     margin-left: 50px;
+     text-align: center;
 }
-.interfaceSup .counter svg {
-  fill: #2f3676;
+ .interfaceSup .counter svg {
+     fill: #2f3676;
 }
-.interfaceSup .counter svg:hover {
-  fill: #191847;
- ;
+ .interfaceSup .counter svg:hover {
+     fill: #191847;
+     ;
 }
-.botao{
-  border: none;
-  padding: 0px;
-  background: none;
-  outline: none; 
+ .botao{
+     border: none;
+     padding: 0px;
+     background: none;
+     outline: none;
 }
 /*==============Input de observações================*/
  .obsInput .form textarea {
@@ -179,6 +177,6 @@
  footer button:hover {
      transform: scale(1.05);
      background: #191847;
-    ;
+     ;
 }
  
