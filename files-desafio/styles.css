@@ -1,182 +1,206 @@
 @import url("https://rsms.me/inter/inter.css");
- html {
-     font-family: "Inter", sans-serif;
+html {
+	font-family: "Inter", sans-serif;
 }
- @supports (font-variation-settings: normal) {
-     html {
-         font-family: "Inter var", sans-serif;
-    }
+@supports (font-variation-settings: normal) {
+	html {
+		font-family: "Inter var", sans-serif;
+	}
 }
- * {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
 }
- body {
-     background: rebeccapurple;
-     color: #071723;
+
+body {
+	background: rebeccapurple;
+	color: #071723;
+	height: 100vh;
 }
- .box {
-     background-color: #f2f2f2;
-     box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
-     margin: 20px auto;
-     overflow: hidden;
-     width: 550px;
+
+/*==============Corpo================*/
+.box {
+	background-color: #f2f2f2;
+	box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+	max-width: 550px;
+	width: 80%;
+	margin: 20px auto;
+	border-radius: 10px;
 }
- header{
-     background: url(images/header.png) right no-repeat;
-     background-size: cover;
-     height: 187px;
-     width: 101%;
-     padding: 23px 36px;
-     position: relative;
+
+main {padding: 10px 32px;}
+
+/*==============Cabeçalho================*/
+header {
+	background: url(images/header.png) no-repeat;
+	background-size: contain;
+	height: 187px;
+	width: 100%;
+	padding: 23px 36px;
+	border-radius: 8px;
 }
- header h1 {
-     color: #fff;
-     font-size: 23px;
-     font-weight: 300;
+
+/*==============Títulos================*/
+header h1 {
+	color: #fff;
+	font-size: 23px;
+	font-weight: 300;
 }
- header h2 {
-     font-weight: bold;
-     font-size: 24px;
-     line-height: 1.46;
-     color: #fff;
+
+main h2 {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px;
+	color: #071723;
+	margin-bottom: 10px;
 }
- .space {
-     margin-bottom: 16px;
+
+.interfaceQuant h2 {margin-top: 40px;}
+
+.interfaceObs h2 {
+	margin-top: 30px;
+	margin-bottom: 15px;
 }
- .space-md {
-     margin-bottom: 32px;
+
+/*==============Checkbox================*/
+.interfaceCheck .container {
+	display: block;
+	position: relative;
+	padding-top: 3px;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: "Inter";
+	width: 0px;
+	outline: none;
 }
- .label {
-     font-size: 18px;
-     font-weight: 600;
-     font-family: "Inter";
+
+.interfaceCheck .container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
- .fieldset {
-     padding: 0 32px;
-     background-color:#f2f2f2;
+
+.interfaceCheck .container:hover input~.checkmark {
+	background-color: #191847;
 }
-/*==============Style Checkbox================*/
- .interfaceSup .container {
-     display: block;
-     position: relative;
-     padding-top: 3px;
-     padding-left: 35px;
-     margin-bottom: 12px;
-     cursor: pointer;
-     font-size: 14px;
-     font-family: "Inter";
-     width: 0px;
-     outline: none;
+
+.interfaceCheck .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #2F3676;
+	border-radius: 5px;
 }
- .interfaceSup .container input {
-     position: absolute;
-     opacity: 0;
-     cursor: pointer;
-     height: 0;
-     width: 0;
+
+.interfaceCheck .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
 }
- .interfaceSup .container:hover input ~ .checkmark {
-     background-color: #191847;
-     ;
+
+.interfaceCheck .container input:checked~.checkmark:after {
+	display: block;
 }
- .interfaceSup .checkmark {
-     position: absolute;
-     top: 0;
-     left: 0;
-     height: 25px;
-     width: 25px;
-     background-color: #2F3676;
-     border-radius: 5px;
+
+.interfaceCheck .container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
- .interfaceSup .checkmark:after {
-     content: "";
-     position: absolute;
-     display: none;
+
+/*==============Section interface, quantidade de Stickers================*/
+.interfaceQuant .btn {
+	display: flex;
 }
- .interfaceSup .container input:checked ~ .checkmark:after {
-     display: block;
+
+.interfaceQuant input {
+	width: 60px;
+	height: 42px;
+	background: #dde3e9;
+	border: 1px solid #2f3676;
+	border-radius: 8px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 8px;
 }
- .interfaceSup .container .checkmark:after {
-     left: 9px;
-     top: 5px;
-     width: 5px;
-     height: 10px;
-     border: solid white;
-     border-width: 0 3px 3px 0;
-     -webkit-transform: rotate(45deg);
-     -ms-transform: rotate(45deg);
-     transform: rotate(45deg);
+
+.interfaceQuant .svg {
+	fill: #2f3676;
+	cursor: pointer;
 }
-/*==============Input quantidade================*/
- .interfaceSup .rightSvg{
-     margin-top: -46px;
-     margin-left: 120px;
+
+.interfaceQuant .svg:hover {
+	fill: #191847;
 }
- .interfaceSup .counter input {
-     background: #dde3e9;
-     border: 1px solid #2f3676;
-     border-radius: 7px;
-     font-size: 20px;
-     font-weight: bold;
-     width: 60px;
-     height: 42px;
-     position: absolute;
-     margin-top: -46px;
-     margin-left: 50px;
-     text-align: center;
+
+.interfaceQuant button {
+	border: none;
+	background: transparent;
 }
- .interfaceSup .counter svg {
-     fill: #2f3676;
-}
- .interfaceSup .counter svg:hover {
-     fill: #191847;
-     ;
-}
- .botao{
-     border: none;
-     padding: 0px;
-     background: none;
-     outline: none;
-}
+
 /*==============Input de observações================*/
- .obsInput .form textarea {
-     background: #dde3e9;
-     border: 1px solid #2f3676;
-     border-radius: 8px;
-     color: #071723;
-     height: 140px;
-     padding: 16px;
-     resize: none;
-     width: 100%;
-     font-size: 14px;
-     outline: none;
+.interfaceObs .form textarea {
+	height: 140px;
+	width: 100%;
+	background: #dde3e9;
+	border: 1px solid #2f3676;
+	border-radius: 8px;
+	color: #071723;
+	padding: 8px;
+	resize: none;
+	font-size: 14px;
 }
+
 /*==============Rodapé de box================*/
- footer {
-     padding: 32px;
-     background: #dde3e9;
-     display: flex;
-     justify-content: flex-end;
+footer {
+	margin-top: 10px;
+	border-radius: 0 0 8px 8px;
+	padding: 32px;
+	background: #dde3e9;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
- footer button {
-     appearance: none;
-     background: #2f3676;
-     border: 0;
-     border-radius: 8px;
-     color: #fff;
-     padding: 10px;
-     font-size: 18px;
-     text-transform: uppercase;
-     font-weight: bold;
-     padding: 8px 32px;
-     transition: all .3s ease-in-out;
-     outline: none;
+
+footer p {
+	color: #00C57C;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 22px;
 }
- footer button:hover {
-     transform: scale(1.05);
-     background: #191847;
-     ;
+
+footer button {
+	appearance: none;
+	background: #2f3676;
+	border: 0;
+	border-radius: 8px;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 8px 32px;
+	transition: all .3s ease-in-out;
 }
- 
+
+footer button:hover {
+	background: #191847;
+	cursor: pointer;
+}

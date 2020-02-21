@@ -1,86 +1,71 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='keywords' content='formulario, e-commerce, loja, stickers'>
+    <meta name='author' content="André Alves">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
+    <link href='styles.css' rel='stylesheet'>
     <title>Teste Frontend VAGAS.com</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-
     <div class="box">
         <header>
             <h1>Formulário<br/> para compra de <br/> <strong>Pacote de Stickers</strong></h1>
         </header>
 
         <main>
-            <section class='interfaceSup'>
-                <div class="space-md"></div>
+            <section class='interfaceCheck'>
+                <h2>Quais stickers:</h2>
+                <!--Checkboxes-->
+                <label class="container">React
+                    <input id='chkReact' name='React' type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Vue
+                    <input id='chkVue' name='Vue' type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Angular
+                    <input id='chkAngular' name='Angular' type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </section>
 
-                <div class="fieldset">
-                    <div class="label">Quais stickers:</div>
-                    <div class="space"></div>
-                    <!-- Referência estilizar o checkbox https://www.w3schools.com/howto/howto_css_custom_checkbox.asp-->
-                    <label class="container">React
-                        <input id='chkReact' name='React' type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">Vue
-                        <input id='chkVue' name='Vue' type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">Angular
-                        <input id='chkAngular' name='Angular' type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <div class="space-md"></div>
-                </div>
-
-                <div class="fieldset">
-                    <div class="label">Quantos stickers de cada?</div>
-                    <div class="space"></div>
-                    <div class="counter">
-                        <div class='leftSvg'>
-                            <button class='botao' onclick='sub(0)'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
-                                    <path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <input id='numStick' type="text" placeholder="0" />
-                        <div class='rightSvg'>
-                            <button class='botao' onclick='add()'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
-                                    <path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+            <section class='interfaceQuant'>
+                <h2>Quantos stickers de cada?</h2>
+                <div class='btn'>
+                    <button>
+                        <svg id="btnSub" class='svg left' xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+                            <path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
+                        </svg>
+                    </button>
+                    <input id='stickerVariable' type="text" placeholder="0" />
+                    <button>
+                        <svg id="btnAdd" class='svg right' xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+                            <path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
+                        </svg>
+                    </button>
                 </div>
             </section>
 
-            <section class="obsInput">
-                <div class="space-md"></div>
+            <section class="interfaceObs">
                 <div class="form">
-                    <div class="fieldset">
-                        <div class="label">Observações:</div>
-                        <div class="space"></div>
-                        <textarea id='observe' name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
-                    </div>
+                    <h2>Observações:</h2>
+                    <textarea id='observe' name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
                 </div>
-                <div class="space-md"></div>
             </section>
-
-            <footer>
-                <div>
-                    <button onclick='resultado()'>Enviar</button>
-                </div>
-            </footer>
         </main>
-        <script src="bundle.js"></script>
+
+        <footer>
+            <p></p>
+            <button onclick='resultado()'>Enviar</button>
+        </footer>
+
+        <script src="main.js"></script>
 </body>
 
 </html>
