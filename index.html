@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='keywords' content='formulario, e-commerce, loja, stickers'>
+    <meta name='author' content="André Alves">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
+    <link href='styles.css' rel='stylesheet'>
+    <title>Teste Frontend VAGAS.com</title>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <h1>Formulário<br/> para compra de <br/> <strong>Pacote de Stickers</strong></h1>
+        </header>
+
+        <main>
+            <section class='interfaceCheck'>
+                <h2>Quais stickers:</h2>
+                <!--Checkboxes-->
+                <label class="container">React
+                    <input id='chkReact' name='React' type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Vue
+                    <input id='chkVue' name='Vue' type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Angular
+                    <input id='chkAngular' name='Angular' type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </section>
+
+            <section class='interfaceQuant'>
+                <h2>Quantos stickers de cada?</h2>
+                <div class='btn'>
+                    <button class='btn-left'>
+                        <svg id="btnSub" class='svg left' xmlns="http://www.w3.org/2000/svg" width="42" height="42"><path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" /></svg>
+                    </button>
+                    <input id='stickerVariable' type="text" placeholder="0" />
+                    <button>
+                        <svg id="btnAdd" class='svg right' xmlns="http://www.w3.org/2000/svg" width="42" height="42"><path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg>
+                    </button>
+                </div>
+            </section>
+
+            <section class="interfaceObs">
+                <div class="form">
+                    <h2>Observações:</h2>
+                    <textarea id='observe' name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p></p>
+            <button>Enviar</button>
+        </footer>
+
+        <script src="main.js"></script>
+</body>
+
+</html>
